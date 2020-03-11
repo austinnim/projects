@@ -11,6 +11,7 @@ strings.
 document.addEventListener("DOMContentLoaded", function (){
   var todoArray = JSON.parse(localStorage.getItem("list"));
   var finishedTask = JSON.parse(localStorage.getItem("completed"));
+  //var finishedTask, todoArray = [];
   var overdue = [];
   var newDay = false;
 
@@ -40,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function (){
     if(newDay){
       overdue = todoArray.slice(0, todoArray.length-1);
       for(let i=0; i<overdue.length;i++){
-        document.querySelectorAll("li")[i].style.backgroundColor = orange;
+        document.querySelectorAll("li")[i].style.backgroundColor = "orange";
       }
     }
   } else {
@@ -59,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function (){
     newListItem = document.querySelectorAll("li")[[(todoArray.push(addTask))-1]];
     document.getElementById("newTask").value= "";
     // creates a click event to mark task as complete
-    newListItem.addEventListener("click", function(){
+  /*  newListItem.addEventListener("click", function(){
       // creates a new item for completed list
       var item = document.createElement("li");
       item.innerText = this.innerText;
@@ -72,7 +73,18 @@ document.addEventListener("DOMContentLoaded", function (){
       localStorage.setItem("list", JSON.stringify(todoArray));
       localStorage.setItem("completed", JSON.stringify(finishedTask));
     });
+   */
     localStorage.setItem("list", JSON.stringify(todoArray));
+  });
+
+  document.getElementById("todolist").addEventListener("click", function (e){
+    if(e.target && e.target.nodeName == "LI"){
+      document.getElementById("completed").appendChild(e.target);
+      finishedTask.push(e.target.innerText);
+      todoArray.splice(todoArray.indexOf[e.target.innerText],1);
+      localStorage.setItem("list", JSON.stringify(todoArray));
+      localStorage.setItem("completed", JSON.stringify(finishedTask));
+    }
   });
 
   function loadTodoList (){
@@ -83,16 +95,7 @@ document.addEventListener("DOMContentLoaded", function (){
       newListItem.innerText = todoArray[i];
       newListItem.className = "notcompleted";
       var liNode = document.getElementById("todolist").appendChild(newListItem);
-      liNode.addEventListener("click", function(){
-        todoArray.splice(todoArray.indexOf[this.innerText], 1);
-        var item = document.createElement("li");
-        item.innerText = this.innerText;
-        document.getElementById("completed").appendChild(item);
-        finishedTask.push(this.innerText);
-        this.remove();
-        localStorage.setItem("list", JSON.stringify(todoArray));
-        localStorage.setItem("completed", JSON.stringify(finishedTask));
-      });
     }
   }
+
 });
