@@ -53,35 +53,28 @@ document.addEventListener("DOMContentLoaded", function (){
   // set up submit button for users to submit new task
   document.getElementById("submitTask").addEventListener("click", function(){
     // create new li node to be inserted
-    var newListItem = document.createElement("li");
     var addTask = document.getElementById("newTask").value;
-    newListItem.innerText = addTask;
-    document.getElementById("todolist").appendChild(newListItem);
-    newListItem = document.querySelectorAll("li")[[(todoArray.push(addTask))-1]];
-    document.getElementById("newTask").value= "";
-    // creates a click event to mark task as complete
-  /*  newListItem.addEventListener("click", function(){
-      // creates a new item for completed list
-      var item = document.createElement("li");
-      item.innerText = this.innerText;
-      document.getElementById("completed").appendChild(item);
-      finishedTask.push(this.innerText);
-      // remove the task from the todo array
-      todoArray.splice(todoArray.indexOf[this.innerText], 1);
-      this.remove();
-      // replace the previous todo and completed arrays
+    if (addTask == "") {
+      alert("enter a task");
+    } else {
+      newListItem = document.querySelectorAll("li")[[(todoArray.push(addTask))-1]];
+      newListItem.innerText = addTask;
+      newListItem.className = "notcompleted";
+      document.getElementById("newTask").value= "";
+      document.getElementById("todolist").appendChild(newListItem);
       localStorage.setItem("list", JSON.stringify(todoArray));
-      localStorage.setItem("completed", JSON.stringify(finishedTask));
-    });
-   */
-    localStorage.setItem("list", JSON.stringify(todoArray));
+    }
   });
 
   document.getElementById("todolist").addEventListener("click", function (e){
     if(e.target && e.target.nodeName == "LI"){
       document.getElementById("completed").appendChild(e.target);
+      console.log("before todoArray: " + todoArray);
+      console.log("before finished: " + finishedTask);
       finishedTask.push(e.target.innerText);
-      todoArray.splice(todoArray.indexOf[e.target.innerText],1);
+      todoArray.splice(todoArray.indexOf(e.target.innerText),1);
+      console.log("after: " + todoArray);
+      console.log("after: " + finishedTask);
       localStorage.setItem("list", JSON.stringify(todoArray));
       localStorage.setItem("completed", JSON.stringify(finishedTask));
     }
