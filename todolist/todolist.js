@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function (){
     newDay = true;
     localStorage.setItem("completed", JSON.stringify(finishedTask));
   }
+
   if(todoArray != null && todoArray.length != 0){
     loadTodoList();
     if(newDay){
@@ -57,9 +58,11 @@ document.addEventListener("DOMContentLoaded", function (){
     if (addTask == "") {
       alert("enter a task");
     } else {
-      newListItem = document.querySelectorAll("li")[[(todoArray.push(addTask))-1]];
+      var newListItem = document.createElement("li");
+      console.log(newListItem)
       newListItem.innerText = addTask;
       newListItem.className = "notcompleted";
+      todoArray.push(addTask);
       document.getElementById("newTask").value= "";
       document.getElementById("todolist").appendChild(newListItem);
       localStorage.setItem("list", JSON.stringify(todoArray));

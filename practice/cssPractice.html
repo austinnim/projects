@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Display and Position Practice</title>
+    <link rel="stylesheet" href="cssPractice.css">
+  </head>
+  <body>
+    <section id="displayBlock">
+      <h1>Block Level</h1>
+        <p>You can change <span id="inline">inline</span> to <span id="block">block</block> level elements and vice versa</p>
+        <ol>
+            <li>List block level</li>
+            <li>Ain't playing son</li>
+        </ol>
+      <h2>Inline Element</h2>
+      <p>images are inline</p><img style="width:100px; height: 100px;" src="IMG_1465.jpeg"><a href="#">CLICK ME</a><img style="width:100px; height: 100px;" src="IMG_1465.jpeg"><img style="width:100px; height: 100px;" src="IMG_1465.jpeg">
+
+      <h3>Inline-Block elements</h3>
+      <p>Unlike inline elements the width and height can be set
+        <p id="inline-block">top and bottom margin are capable</p>
+      </p>
+    </section>
+    <section id="positionBlock">
+
+      <div id="normal">
+        <p>I'm a block</p>
+        <p>I am also a block</p>
+        <img style="width:100px; height:100px;" src="IMG_1465.jpeg"><span> These r my <strong>inline homies </strong></span>
+      </div>
+
+      <div id="relative">
+        <div>
+          <div class="placeholder"></div>
+          <div id="placeholderRelative">relative items are moved relative to their place in the normal flow. Height still affects this b/c the object isn't taken out of the flow.</div>
+          <div class="placeholder"></div>
+          <div class="placeholder"></div>
+          <div class="placeholder"></div>
+        </div>
+      </div>
+
+      <div id="absolute">
+        <div class="placeholder"></div>
+        <div id="placeholderAbsolute">absolute items are taken out of the normal flow</div>
+        <div id="placeholderAbsolute2">they can be positioned by adjusting top,left,bottom, and right.</div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+      </div>
+
+      <div id="fixed">
+        <div class="placeholder"></div>
+        <div id="placeholderFixed">form of absolute, but the difference is that fixed objects are positioned via the browser window. doesn't move as you scroll up or down.</div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+      </div>
+
+      <div id="float">
+        <div class="placeholder"></div>
+        <div id="placeholderFloat">takes the element out of normal flow and can be positioned to the left or right</div>
+        <div id="placeholderFloat2">the floated element becomes a block level element which other content can flow around.</div>
+        <div class="placeholder"></div>
+        <div id="floatLeft">
+          <div>Hello</div>
+          <div>Hello</div>
+          <div>Hello</div>
+          <div>Hello</div>
+          <div>Hello</div>
+          <div>Hello</div>
+          <div>Hello</div>
+        </div>
+
+        <div id="floatRight">
+          <div>Hello</div>
+          <div>Hello</div>
+          <div>Hello</div>
+          <div>Hello</div>
+          <div>Hello</div>
+          <div>Hello</div>
+          <div>Hello</div>
+          <div>Hello</div>
+        </div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+      </div>
+
+
+    </section>
+
+  </body>
+<html>

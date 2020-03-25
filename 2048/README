@@ -1,0 +1,38 @@
+Name: Austin Nim
+Login: Cse8bwarm
+Pid: A92137507
+Date: March 3, 2016
+File: README
+
+Vim Related Questions
+1. To replace every instance of the word amazing with amazing the user can
+type(without quotes) ":%s/fun/amazing/g". However, if there is a word, such 
+as funny the word will be turned into amazingny. To replace the whole words
+exactly the user should type(without quotes) ":%s/\<fun\>/amazing/g".
+:%s/fun/amazing will replace the first occurence of fun with amazing.
+
+Unix/Linux Questions
+2. To create a directory called barDir within a directory called fooDir which
+is within another directiory. The user should type(without quotes) "mkdir
+-p/fooDir/barDir" 
+
+3. I would use the command ls to show a file, but with a wildcard I will be able
+to list all the names of files of a certain type. To do this I type(without
+quotes) "ls *.java"
+
+4. To run gvim through the command line to open all java source code files in
+their own tab the user should type(without quotes) "vim -p *.java". 
+
+Java Question
+5. The static keyword means that the method can be accessed without initializing
+an object of the class. For example, you would use a static method if you wanted
+to convert celsius to kelvin, because to do this conversion no objects need to
+be initialized, but rather a parameter is given and you want to perform some
+action on that parameter to produce an output.
+
+6. To help the student improve her design I would recommend her create
+subclasses that inherited from the superclass ShapeDrawer. This will help split
+each shape into its own class with a method that overrides its superclass
+methods. As a result of this the student can implement other methods that are
+specific to each shape.
+
