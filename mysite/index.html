@@ -2,59 +2,69 @@
 <html>
   <head>
     <title> Austin Nim - Looking for any opportunity </title>
-    <script src="app.js"></script> 
+    <link rel="stylesheet" href="index.css">
+    <script src="app.js"></script>
   </head>
   <body>
     <header>
       <nav>
-        <ol>
-          <li>Home</li>
-          <li>Projects</li>
-          <li>About</li>
-          <li>Contact</li>
+        <ol id="navMenu">
+          <li class="navItems">Home</li>
+          <li class="navItems">Projects</li>
+          <li class="navItems">About</li>
+          <li class="navItems">Contact</li>
         </ol>
       </nav>
     </header>
+    <section id="background">
+      >
+    </section>
     <main id="project">
       <section id="topProjects">
-        <div>
+        <div class="projectCard">
           <p class="projectName"> TITLE #</p>
           <p class="projectDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div>
+        <div class="projectCard">
           <p class="projectName"> TITLE #</p>
           <p class="projectDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div>
+        <div class="projectCard">
           <p class="projectName"> TITLE #</p>
           <p class="projectDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
       </section>
 
       <section id="bottomProjects">
-        <div>
+        <div class="projectCard">
           <p class="projectName"> TITLE #</p>
           <p class="projectDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div>
+        <div class="projectCard">
           <p class="projectName"> TITLE #</p>
           <p class="projectDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div>
+        <div class="projectCard">
           <p class="projectName"> TITLE #</p>
           <p class="projectDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
       </section>
-
     </main>
+
     <footer id="contact">
       <form id="contactForm" action="#" method="POST">
-        <label for="emailAddress"> Email: </label>
-        <input type="email" id="emailAddress" name="email" placeholder:"user@yahoo.com">
-        <label for="subjectHeader">Subject: </label>
-        <input type="text" id="subjectHeader" name="subject" placeholder:"optional">
-        <label for="messageBody"> Message: </label>
-        <textarea id="messageBody"  name="message" placeholder:"enter text"></textarea>
+      <!--  <label for="name"> Name &nbsp&nbsp&nbsp&nbsp</label> -->
+      </br>
+        <input type="text" placeholder="Full name ...">
+      <!--  <label for="emailAddress"> Email </label> -->
+        <input type="email" id="emailAddress" name="email" placeholder="Email (ie:user@yahoo.com)">
+      </br>
+      <!-- <label for="subjectHeader">Subject &nbsp</label> -->
+        <input type="text" id="subjectHeader" name="subject" placeholder="Subject ...">
+      </br>
+      <!-- <label for="messageBody"> Message </label>  -->
+        <textarea id="messageBody"  name="message" placeholder="Your message ..."></textarea>
+      </br>
         <input type="submit" id="submitEmail">
       </form>
     </footer>
