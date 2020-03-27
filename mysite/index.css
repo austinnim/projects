@@ -2,25 +2,47 @@ body {
   margin: 0;
   padding: 0;
 }
+
 nav {
-  position: absolute;
-  top: 0;
+  display: block;
+  line-height: 25px;
+  width: 100%;
+  height:50px;
+  padding-top: 20px;
+  background-color: red;
+}
+ul {
+  margin: 0;
+  padding:0;
+  list-style-type: none;
+  text-align: right;
+}
+.navItems {
+  float: right;
+  width: 10%;
+  height:100%;
+  text-align: center;
+
+}
+.navItems:hover {
+  background-color: yellow;
+  border: 1px solid black;
+}
+#nameTag{
+  float: left;
 }
 
-ol {
-  list-style-type: none;
+#contact {
+  margin-right: 20px;
 }
-li {
-  float:left;
-  margin-right: 10px;
-}
+
 
 main {
   margin-top: 100px;
   overflow: auto;
 }
 
-.project:after {
+.projectSection:after {
   content: ".";
   visibility: hidden;
   display: block;
