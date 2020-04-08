@@ -2,6 +2,8 @@
 <html>
   <head>
     <title> Austin Nim - Looking for any opportunity </title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="index.css">
     <script src="app.js"></script>
   </head>
@@ -10,58 +12,96 @@
     <header>
       <nav>
         <ul id="navMenu">
-          <li id="nameTag">Austin Nim - Looking for any opportunity</li>
-          <li class="navItems" id="contact"><a href="index.html/#contact">Contact</a></li>
-          <li class="navItems" id="projects"><a href="#">Projects</a></li>
+          <li id="nameTag"><a href="index.html"> Austin Nim</a></li>
+          <li class="navItems" id="contact"><a href="#contactSection">Contact</a></li>
+          <li class="navItems" id="projects"><a href="#topProjects">Projects</a></li>
           <li class="navItems" id="about"><a href="#">About</a></li>
           <li class="navItems" id="index"><a href="index.html">Home</a></li>
         </ul>
       </nav>
     </header>
-
-    <section id="background">
-      <h1>Background</h1>
-      <p></p>
-      <p></p>
-    </section>
-
     <main id="projectSection">
+
+      <h2>Projects</h2>
       <section id="topProjects">
-        <div class="projectCard">
-          <p class="projectName"> TITLE #</p>
-          <p class="projectDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="projectCard" id="medkitCard">
+          <p class="projectName"> MedKit </p>
+          <div class ="showDescription">
+            <ul class="projectTag">
+              <li> UI | Javascript </li>
+            </ul>
+            <p class="projectDescription">Mobile web application aimed towards care-takers to enhance medical care experience. </p>
+            <a class="button" href="#">Learn More</a>
+          </div>
         </div>
         <div class="projectCard">
-          <p class="projectName"> TITLE #</p>
-          <p class="projectDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="projectName"> Petential </p>
+          <div class="showDescription">
+            <ul class="projectTag">
+              <li> Cognitive Design | Web Design </li>
+            </ul>
+            <p class="projectDescription">Online Adoption Agency that standardizes the animal adoption process and increases pet retention. </p>
+            <a class="button" href="./routes/petential.html">Learn More</a>
+          </div>
         </div>
         <div class="projectCard">
-          <p class="projectName"> TITLE #</p>
-          <p class="projectDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="projectName"> Zero South </p>
+          <div class="showDescription">
+            <ul class="projectTag">
+              <li> UI | UX | Web Design </li>
+            </ul>
+            <p class="projectDescription"> Desktop and mobile web design to increase the brand and exposure of a band in San Diego. </p>
+            <a class="button" href="#">Learn More</a>
+          </div>
         </div>
       </section>
-
+      <!--
       <section id="bottomProjects">
         <div class="projectCard">
-          <p class="projectName"> TITLE #</p>
-          <p class="projectDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="projectName"> MedKit </p>
+          <div class ="showDescription">
+            <ul class="projectTag">
+              <li> UI | Javascript </li>
+            </ul>
+            <p class="projectDescription">Mobile web application aimed towards care-takers to enhance medical care experience. </p>
+          </div>
         </div>
         <div class="projectCard">
-          <p class="projectName"> TITLE #</p>
-          <p class="projectDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="projectName"> Petential </p>
+          <div class="showDescription">
+            <ul class="projectTag">
+              <li> Cognitive Design | Web Design </li>
+            </ul>
+            <p class="projectDescription">Online Adoption Agency that standardizes the animal adoption process and increases pet retention. </p>
+          </div>
         </div>
         <div class="projectCard">
-          <p class="projectName"> TITLE #</p>
-          <p class="projectDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="projectName"> Zero South </p>
+          <div class="showDescription">
+            <ul class="projectTag">
+              <li> UI | UX | Web Design </li>
+            </ul>
+            <p class="projectDescription"> Desktop and mobile web design to increase the brand and exposure of a band in San Diego. </p>
+          </div>
         </div>
       </section>
+    -->
     </main>
-
+    <!--
+        <section id="background">
+          <h1>Background</h1>
+          <div id="backgroundInfo">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </section>
+      -->
     <footer id="contactSection">
+      <h3>Contact Me</h3>
       <form id="contactForm" action="#" method="POST">
       <!--  <label for="name"> Name &nbsp&nbsp&nbsp&nbsp</label> -->
       </br>
-        <input type="text" placeholder="Full name ...">
+        <input type="text" id="senderName" placeholder="Full name ...">
       <!--  <label for="emailAddress"> Email </label> -->
         <input type="email" id="emailAddress" name="email" placeholder="Email (ie:user@yahoo.com)">
       </br>
